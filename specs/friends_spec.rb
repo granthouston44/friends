@@ -94,16 +94,16 @@ class TestFriends < MiniTest::Test
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-def test_remove_name
-  result = remove_a_name(@person1, "John")
-  assert_equal(4, result)
-end
+  def test_remove_name
+    result = remove_a_name(@person1, "John")
+    assert_equal(4, result)
+  end
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
-def test_total_money
-  result = total_money(@people)
-assert_equal(143, result)
-end
+  def test_total_money
+    result = total_money(@people)
+    assert_equal(143, result)
+  end
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
@@ -117,8 +117,10 @@ end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
-
-
+def test_fav_food_joined
+  result = fav_food_joined(@people)
+  assert_equal(["charcuterie", "soup","bread","Scooby snacks", "spaghetti", "ratatouille", "spinach"], result)
+end
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
 end
